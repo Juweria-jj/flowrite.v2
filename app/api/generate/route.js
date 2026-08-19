@@ -9,7 +9,7 @@ export async function POST(req) {
     }
 
     const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-    const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash"});
+    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash"});
 
     const prompt = `Write a ${length} ${tone} college essay based on these bullets: ${bullets}. Write like a 17 year old student.`;
     
